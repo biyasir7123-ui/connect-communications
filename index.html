@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" dir="rtl" lang="ur"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Connect Communications | پریمیم فائبر انٹرنیٹ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Urdu:wght@400;700&amp;family=Manrope:wght@400;600;700&amp;family=IBM+Plex+Sans:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#001b5e",
+                    "secondary": "#00a2fd",
+                    "surface": "#faf8ff",
+                    "on-surface": "#131b2e",
+                    "surface-variant": "#dae2fd",
+                    "outline": "#757681",
+                    "primary-container": "#e2e7ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1.5rem",
+                    "3xl": "2.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline-urdu": ["Noto Serif Urdu"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["IBM Plex Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', 'Noto Serif Urdu', sans-serif; background: #faf8ff; }
+        .urdu-text { font-family: 'Noto Serif Urdu', serif; }
+        .glass-header { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+        .glass-card { background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.4); }
+        .hero-gradient { background: linear-gradient(135deg, rgba(0, 27, 94, 0.9) 0%, rgba(0, 162, 253, 0.7) 100%); }
+        .package-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .package-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0, 162, 253, 0.2); }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glow-blue { box-shadow: 0 0 20px rgba(0, 162, 253, 0.4); }
+    </style>
+</head>
+<body class="overflow-x-hidden selection:bg-secondary/30">
+<nav class="glass-header docked full-width top-0 sticky z-50 transition-all duration-500">
+<div class="flex justify-between items-center h-24 px-6 md:px-12 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<svg class="h-12 w-12" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="24" fill="#001b5e" r="24"/>
+<path d="M14 30C14 23.373 19.373 18 26 18" opacity="0.35" stroke="#00a2fd" stroke-linecap="round" stroke-width="3"/>
+<path d="M14 24C14 15.716 20.716 9 29 9" opacity="0.6" stroke="#00a2fd" stroke-linecap="round" stroke-width="3"/>
+<circle cx="14" cy="34" fill="#00a2fd" r="4"/>
+</svg>
+<div class="flex flex-col">
+<span class="text-2xl font-bold leading-none tracking-tight text-primary">CONNECT</span>
+<span class="text-[10px] font-medium tracking-[0.2em] text-secondary uppercase">Communications</span>
+</div>
+</div>
+<div class="hidden lg:flex items-center gap-10 font-medium">
+<a class="text-primary hover:text-secondary transition-colors" href="#home">ہوم</a>
+<a class="text-primary hover:text-secondary transition-colors" href="#packages">پیکجز</a>
+<a class="text-primary hover:text-secondary transition-colors" href="#features">خصوصیات</a>
+<a class="text-primary hover:text-secondary transition-colors" href="#about">ہمارے بارے میں</a>
+</div>
+<div class="hidden md:flex items-center gap-4">
+<a class="flex items-center gap-2 bg-[#25D366] text-white px-5 py-2.5 rounded-full font-bold text-sm transition-all hover:scale-105 active:scale-95 shadow-md" href="https://wa.me/923067243531">
+<span class="material-symbols-outlined text-xl">chat</span> WhatsApp
+            </a>
+<button class="bg-primary/5 text-primary border border-primary/10 px-5 py-2.5 rounded-full font-bold text-sm transition-all hover:bg-primary hover:text-white">
+                Customer Login
+            </button>
+</div>
+<button class="lg:hidden text-primary p-2" onclick="toggleMobileNav()">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Mobile Navigation -->
+<div class="fixed inset-0 z-[100] translate-x-full transition-transform duration-500 lg:hidden" id="mobile-nav">
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-md" onclick="toggleMobileNav()"></div>
+<aside class="bg-white absolute right-0 h-full w-80 flex flex-col p-8 shadow-2xl">
+<div class="flex justify-between items-center mb-12">
+<div class="flex items-center gap-2">
+<svg class="h-8 w-8" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="24" fill="#001b5e" r="24"/>
+<path d="M14 30C14 23.373 19.373 18 26 18" opacity="0.35" stroke="#00a2fd" stroke-linecap="round" stroke-width="3"/>
+<path d="M14 24C14 15.716 20.716 9 29 9" opacity="0.6" stroke="#00a2fd" stroke-linecap="round" stroke-width="3"/>
+<circle cx="14" cy="34" fill="#00a2fd" r="4"/>
+</svg>
+<span class="font-bold text-primary">CONNECT</span>
+</div>
+<button onclick="toggleMobileNav()"><span class="material-symbols-outlined">close</span></button>
+</div>
+<div class="flex flex-col gap-6 text-lg urdu-text">
+<a class="hover:text-secondary" href="#home">ہوم</a>
+<a class="hover:text-secondary" href="#packages">پیکجز</a>
+<a class="hover:text-secondary" href="#features">ہماری خصوصیات</a>
+<a class="hover:text-secondary" href="#about">ہمارے بارے میں</a>
+</div>
+<div class="mt-auto space-y-4">
+<a class="w-full bg-[#25D366] text-white py-4 rounded-xl flex justify-center items-center gap-2 font-bold" href="https://wa.me/923067243531">WhatsApp</a>
+<a class="w-full bg-primary text-white py-4 rounded-xl flex justify-center items-center gap-2 font-bold" href="tel:03067243531">Call Now</a>
+</div>
+</aside>
+</div>
+<section class="relative min-h-[90vh] flex items-center overflow-hidden bg-primary" id="home">
+<!-- Shader Background Mimic -->
+<div class="absolute inset-0 opacity-40">
+<svg class="w-full h-full" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="fiberLine" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#00a2fd" stop-opacity="0"/>
+<stop offset="50%" stop-color="#00a2fd" stop-opacity="0.9"/>
+<stop offset="100%" stop-color="#00a2fd" stop-opacity="0"/>
+</linearGradient>
+</defs>
+<g opacity="0.3" stroke="#ffffff" stroke-width="1">
+<path d="M0,120 Q300,60 600,140 T1200,100"/>
+<path d="M0,260 Q300,340 600,260 T1200,300"/>
+<path d="M0,420 Q300,360 600,440 T1200,400"/>
+<path d="M0,580 Q300,660 600,580 T1200,620"/>
+<path d="M0,720 Q300,660 600,740 T1200,700"/>
+</g>
+<g stroke="url(#fiberLine)" stroke-width="2.5" fill="none">
+<path d="M-100,150 Q300,90 600,170 T1300,130">
+<animate attributeName="opacity" dur="4s" repeatCount="indefinite" values="0.3;1;0.3"/>
+</path>
+<path d="M-100,450 Q300,390 600,470 T1300,430">
+<animate attributeName="opacity" begin="1.3s" dur="4s" repeatCount="indefinite" values="0.3;1;0.3"/>
+</path>
+<path d="M-100,650 Q300,700 600,610 T1300,650">
+<animate attributeName="opacity" begin="2.6s" dur="4s" repeatCount="indefinite" values="0.3;1;0.3"/>
+</path>
+</g>
+<g fill="#00a2fd">
+<circle cx="180" cy="130" r="3"><animate attributeName="opacity" dur="3s" repeatCount="indefinite" values="0;1;0"/></circle>
+<circle cx="520" cy="420" r="3"><animate attributeName="opacity" begin="1s" dur="3s" repeatCount="indefinite" values="0;1;0"/></circle>
+<circle cx="860" cy="600" r="3"><animate attributeName="opacity" begin="2s" dur="3s" repeatCount="indefinite" values="0;1;0"/></circle>
+<circle cx="1020" cy="180" r="3"><animate attributeName="opacity" begin="1.6s" dur="3s" repeatCount="indefinite" values="0;1;0"/></circle>
+<circle cx="340" cy="650" r="3"><animate attributeName="opacity" begin="0.6s" dur="3s" repeatCount="indefinite" values="0;1;0"/></circle>
+</g>
+</svg>
+</div>
+<div class="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8 py-20 text-center lg:text-right">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-secondary/20 rounded-full border border-secondary/30 text-secondary text-sm font-bold animate-pulse">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 99.9% اپ ٹائم کی ضمانت
+            </div>
+<h1 class="font-headline-urdu text-5xl md:text-7xl text-white leading-[1.2]">
+                پاکستان کا جدید ترین <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-l from-secondary to-cyan-300">فائبر آپٹک نیٹ ورک</span>
+</h1>
+<p class="text-xl text-white/70 urdu-text max-w-xl lg:ml-0 lg:mr-auto">
+                بجلی کی سی رفتار اور بے مثال استحکام۔ پاکپتن شریف کے گھروں کو اب دنیا سے جوڑنے کا وقت آگیا ہے۔
+            </p>
+<div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start pt-4">
+<a class="bg-secondary text-white px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-xl shadow-secondary/20 flex items-center gap-3 urdu-text" href="#packages">
+                    پیکج منتخب کریں
+                </a>
+<a class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white hover:text-primary transition-all flex items-center gap-3 urdu-text" href="https://wa.me/923067243531">
+                    واٹس ایپ کریں
+                </a>
+</div>
+<div class="grid grid-cols-3 gap-6 pt-8 border-t border-white/10">
+<div>
+<div class="text-3xl font-bold text-white">500+</div>
+<div class="text-sm text-white/50 urdu-text">خوش صارفین</div>
+</div>
+<div>
+<div class="text-3xl font-bold text-white">10+</div>
+<div class="text-sm text-white/50 urdu-text">کوریج ایریاز</div>
+</div>
+<div>
+<div class="text-3xl font-bold text-white">5+</div>
+<div class="text-sm text-white/50 urdu-text">سالہ تجربہ</div>
+</div>
+</div>
+</div>
+<div class="hidden lg:block relative">
+<img alt="Connect Communications Fiber Network" class="w-full h-auto animate-float drop-shadow-2xl rounded-3xl" src="images/data-center.jpg"/>
+</div>
+</div>
+</section>
+<section class="py-24 bg-surface" id="features">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center space-y-4 mb-20">
+<h2 class="font-headline-urdu text-4xl text-primary font-bold">ہمیں کیوں منتخب کریں؟</h2>
+<p class="text-outline urdu-text">ہم صرف انٹرنیٹ نہیں، ایک تجربہ فراہم کرتے ہیں</p>
+<div class="w-20 h-1.5 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="glass-card p-10 rounded-3xl hover:shadow-2xl transition-all duration-500 group border-b-4 border-transparent hover:border-secondary">
+<div class="w-16 h-16 bg-primary-container rounded-2xl overflow-hidden flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+<img alt="Ultra High Speed" class="w-full h-full object-cover" src="images/robot-tech.jpg"/>
+</div>
+<h3 class="text-2xl font-bold mb-4 urdu-text text-primary">الٹرا ہائی سپیڈ</h3>
+<p class="text-outline urdu-text leading-relaxed">جدید ترین فائبر ٹیکنالوجی کے ذریعے بغیر کسی تعطل کے تیز ترین ڈاؤن لوڈنگ اور گیمنگ۔</p>
+</div>
+<div class="glass-card p-10 rounded-3xl hover:shadow-2xl transition-all duration-500 group border-b-4 border-transparent hover:border-secondary">
+<div class="w-16 h-16 bg-primary-container rounded-2xl overflow-hidden flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+<img alt="99.9% Uptime" class="w-full h-full object-cover" src="images/global-hands.jpg"/>
+</div>
+<h3 class="text-2xl font-bold mb-4 urdu-text text-primary">99.9% اپ ٹائم</h3>
+<p class="text-outline urdu-text leading-relaxed">ہماری سروس ہر موسم اور ہر وقت فعال رہتی ہے تاکہ آپ کا کام کبھی نہ رکے۔</p>
+</div>
+<div class="glass-card p-10 rounded-3xl hover:shadow-2xl transition-all duration-500 group border-b-4 border-transparent hover:border-secondary">
+<div class="w-16 h-16 bg-primary-container rounded-2xl overflow-hidden flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
+<img alt="24/7 Support" class="w-full h-full object-cover" src="images/finance-network.jpg"/>
+</div>
+<h3 class="text-2xl font-bold mb-4 urdu-text text-primary">24/7 ٹیکنیکل سپورٹ</h3>
+<p class="text-outline urdu-text leading-relaxed">ہمارے ماہرین چوبیس گھنٹے آپ کی شکایات کے ازالے کے لیے تیار رہتے ہیں۔</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white" id="packages">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="text-right space-y-3">
+<span class="text-secondary font-bold tracking-widest uppercase text-sm">Packages</span>
+<h2 class="font-headline-urdu text-4xl text-primary font-bold">ہمارے انٹرنیٹ پیکجز</h2>
+</div>
+<p class="text-outline urdu-text max-w-md text-right">اپنی ضرورت کے مطابق بہترین پلان کا انتخاب کریں اور ڈیجیٹل دنیا میں داخل ہوں۔</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8"><!-- 5 Mbps - Starter -->
+<div class="package-card glass-card p-8 rounded-[2rem] flex flex-col items-center text-center">
+<div class="text-primary/40 font-bold mb-2">STARTER</div>
+<div class="text-5xl font-black text-primary mb-4">5 <span class="text-lg">Mbps</span></div>
+<div class="w-full h-px bg-primary/10 mb-6"></div>
+<ul class="space-y-4 mb-8 urdu-text text-sm flex-grow">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> لامحدود ڈیٹا</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> HD اسٹریمنگ</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> 24/7 سپورٹ</li>
+</ul>
+<button class="w-full py-4 bg-primary text-white rounded-2xl font-bold transition-all hover:bg-secondary" onclick="openModal('5 Mbps')">Apply Now</button>
+</div>
+<!-- 10 Mbps - Basic -->
+<div class="package-card glass-card p-8 rounded-[2rem] flex flex-col items-center text-center">
+<div class="text-primary/40 font-bold mb-2">BASIC</div>
+<div class="text-5xl font-black text-primary mb-4">10 <span class="text-lg">Mbps</span></div>
+<div class="w-full h-px bg-primary/10 mb-6"></div>
+<ul class="space-y-4 mb-8 urdu-text text-sm flex-grow">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> لامحدود ڈیٹا</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> HD اسٹریمنگ</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> 24/7 سپورٹ</li>
+</ul>
+<button class="w-full py-4 bg-primary text-white rounded-2xl font-bold transition-all hover:bg-secondary" onclick="openModal('10 Mbps')">Apply Now</button>
+</div>
+<!-- 15 Mbps - Plus -->
+<div class="package-card glass-card p-8 rounded-[2rem] flex flex-col items-center text-center">
+<div class="text-primary/40 font-bold mb-2">PLUS</div>
+<div class="text-5xl font-black text-primary mb-4">15 <span class="text-lg">Mbps</span></div>
+<div class="w-full h-px bg-primary/10 mb-6"></div>
+<ul class="space-y-4 mb-8 urdu-text text-sm flex-grow">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> لامحدود ڈیٹا</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> HD اسٹریمنگ</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> 24/7 سپورٹ</li>
+</ul>
+<button class="w-full py-4 bg-primary text-white rounded-2xl font-bold transition-all hover:bg-secondary" onclick="openModal('15 Mbps')">Apply Now</button>
+</div>
+<!-- 20 Mbps - Standard (Most Popular) -->
+<div class="package-card bg-gradient-to-b from-primary to-blue-900 p-8 rounded-[2rem] flex flex-col items-center text-center relative border-4 border-secondary/20 shadow-2xl">
+<div class="absolute -top-4 bg-secondary text-white px-6 py-1 rounded-full text-xs font-bold urdu-text">سب سے زیادہ پسندیدہ</div>
+<div class="text-white/50 font-bold mb-2">STANDARD</div>
+<div class="text-5xl font-black text-white mb-4">20 <span class="text-lg text-white/60">Mbps</span></div>
+<div class="w-full h-px bg-white/10 mb-6"></div>
+<ul class="space-y-4 mb-8 urdu-text text-sm text-white/80 flex-grow">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">check</span> لامحدود ڈیٹا</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">check</span> 4K اسٹریمنگ</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">check</span> 24/7 سپورٹ</li>
+</ul>
+<button class="w-full py-4 bg-secondary text-white rounded-2xl font-bold transition-all hover:brightness-110 glow-blue" onclick="openModal('20 Mbps')">Apply Now</button>
+</div>
+<!-- 25 Mbps - Pro -->
+<div class="package-card glass-card p-8 rounded-[2rem] flex flex-col items-center text-center">
+<div class="text-primary/40 font-bold mb-2">PRO</div>
+<div class="text-5xl font-black text-primary mb-4">25 <span class="text-lg">Mbps</span></div>
+<div class="w-full h-px bg-primary/10 mb-6"></div>
+<ul class="space-y-4 mb-8 urdu-text text-sm flex-grow">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> لامحدود ڈیٹا</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> 4K اسٹریمنگ</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> 24/7 سپورٹ</li>
+</ul>
+<button class="w-full py-4 bg-primary text-white rounded-2xl font-bold transition-all hover:bg-secondary" onclick="openModal('25 Mbps')">Apply Now</button>
+</div>
+<!-- 30 Mbps - Gamer -->
+<div class="package-card glass-card p-8 rounded-[2rem] flex flex-col items-center text-center">
+<div class="text-primary/40 font-bold mb-2">GAMER</div>
+<div class="text-5xl font-black text-primary mb-4">30 <span class="text-lg">Mbps</span></div>
+<div class="w-full h-px bg-primary/10 mb-6"></div>
+<ul class="space-y-4 mb-8 urdu-text text-sm flex-grow">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> لامحدود ڈیٹا</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> 4K اسٹریمنگ</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> 24/7 سپورٹ</li>
+</ul>
+<button class="w-full py-4 bg-primary text-white rounded-2xl font-bold transition-all hover:bg-secondary" onclick="openModal('30 Mbps')">Apply Now</button>
+</div>
+<!-- 40 Mbps - Business -->
+<div class="package-card glass-card p-8 rounded-[2rem] flex flex-col items-center text-center">
+<div class="text-primary/40 font-bold mb-2">BUSINESS</div>
+<div class="text-5xl font-black text-primary mb-4">40 <span class="text-lg">Mbps</span></div>
+<div class="w-full h-px bg-primary/10 mb-6"></div>
+<ul class="space-y-4 mb-8 urdu-text text-sm flex-grow">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> لامحدود ڈیٹا</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> 4K اسٹریمنگ</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> 24/7 سپورٹ</li>
+</ul>
+<button class="w-full py-4 bg-primary text-white rounded-2xl font-bold transition-all hover:bg-secondary" onclick="openModal('40 Mbps')">Apply Now</button>
+</div>
+<!-- 50 Mbps - Enterprise -->
+<div class="package-card glass-card p-8 rounded-[2rem] flex flex-col items-center text-center">
+<div class="text-primary/40 font-bold mb-2">ENTERPRISE</div>
+<div class="text-5xl font-black text-primary mb-4">50 <span class="text-lg">Mbps</span></div>
+<div class="w-full h-px bg-primary/10 mb-6"></div>
+<ul class="space-y-4 mb-8 urdu-text text-sm flex-grow">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> لامحدود ڈیٹا</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> 4K اسٹریمنگ</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500">check</span> 24/7 سپورٹ</li>
+</ul>
+<button class="w-full py-4 bg-primary text-white rounded-2xl font-bold transition-all hover:bg-secondary" onclick="openModal('50 Mbps')">Apply Now</button>
+</div></div>
+</div>
+</section>
+<section class="py-24 bg-surface-container-low" id="about">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="grid grid-cols-2 gap-4">
+<img alt="Connect Communications Network" class="w-full h-64 object-cover rounded-3xl" src="images/finance-network.jpg"/>
+<img alt="Connect Communications Technology" class="w-full h-64 object-cover rounded-3xl mt-12" src="images/robot-tech.jpg"/>
+<img alt="Connect Communications Connectivity" class="w-full h-64 object-cover rounded-3xl -mt-12" src="images/global-hands.jpg"/>
+<img alt="Connect Communications Infrastructure" class="w-full h-64 object-cover rounded-3xl" src="images/data-center.jpg"/>
+</div>
+<div class="space-y-8">
+<span class="bg-primary/5 text-primary px-4 py-2 rounded-lg font-bold urdu-text">ہمارے بارے میں</span>
+<h2 class="font-headline-urdu text-4xl text-primary leading-tight font-bold">پاکپتن شریف کے دیہاتوں اور قصبوں کو ڈیجیٹل دنیا سے جوڑنا</h2>
+<p class="text-outline urdu-text leading-loose text-lg">کنیکٹ کمیونیکیشنز کا سفر مقامی سطح پر ایک مشن سے شروع ہوا: ہر گھر کو سستا اور تیز ترین انٹرنیٹ مہیا کرنا۔ محمد اکرم کی قیادت میں، ہم آج پاکپتن کے 10 سے زائد علاقوں میں اپنی خدمات کامیابی سے فراہم کر رہے ہیں۔</p>
+<div class="grid grid-cols-2 gap-8">
+<div class="p-6 bg-white rounded-3xl shadow-sm border border-primary/5">
+<div class="text-secondary font-black text-3xl mb-1">24/7</div>
+<div class="urdu-text text-sm opacity-60">سروس اویلیبلٹی</div>
+</div>
+<div class="p-6 bg-white rounded-3xl shadow-sm border border-primary/5">
+<div class="text-secondary font-black text-3xl mb-1">0%</div>
+<div class="urdu-text text-sm opacity-60">پوشیدہ چارجز</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-primary pt-24 pb-12 text-white">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<svg class="h-10 w-10" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="24" fill="#ffffff" fill-opacity="0.1" r="24"/>
+<path d="M14 30C14 23.373 19.373 18 26 18" opacity="0.5" stroke="#ffffff" stroke-linecap="round" stroke-width="3"/>
+<path d="M14 24C14 15.716 20.716 9 29 9" opacity="0.8" stroke="#ffffff" stroke-linecap="round" stroke-width="3"/>
+<circle cx="14" cy="34" fill="#ffffff" r="4"/>
+</svg>
+<div class="flex flex-col">
+<span class="text-xl font-bold leading-none tracking-tight">CONNECT</span>
+<span class="text-[8px] font-medium tracking-[0.2em] text-secondary uppercase">Communications</span>
+</div>
+</div>
+<p class="text-white/50 urdu-text leading-relaxed">جدید ٹیکنالوجی اور اعلیٰ معیار کے عزم کے ساتھ، ہم آپ کے مستقبل کو روشن اور تیز تر بناتے ہیں۔</p>
+</div>
+<div>
+<h4 class="font-bold mb-8 urdu-text text-xl">فوری روابط</h4>
+<ul class="space-y-4 urdu-text text-white/60">
+<li><a class="hover:text-secondary transition-colors" href="#home">ہوم پیج</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#packages">انٹرنیٹ پیکجز</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#about">ہماری کہانی</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-8 urdu-text text-xl">رابطہ کی معلومات</h4>
+<ul class="space-y-4 urdu-text text-white/60">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">person</span> محمد اکرم</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">phone</span> 0306-7243531</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">location_on</span> پاکپتن شریف</li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-8 urdu-text text-xl">سبسکرائب کریں</h4>
+<p class="text-white/50 urdu-text text-sm mb-4">تازہ ترین آفرز حاصل کرنے کے لیے</p>
+<div class="flex">
+<input class="bg-white/10 border-white/20 rounded-r-xl px-4 py-3 w-full focus:ring-secondary focus:border-secondary urdu-text" placeholder="ای میل لکھیں" type="email"/>
+<button class="bg-secondary px-6 rounded-l-xl hover:brightness-110 transition-all"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-white/40 text-sm urdu-text">
+<p>© 2026 کنیکٹ کمیونیکیشنز۔ تمام حقوق محفوظ ہیں۔</p>
+<div class="flex gap-8">
+<a class="hover:text-white" href="#">شرائط و ضوابط</a>
+<a class="hover:text-white" href="#">پرائیویسی پالیسی</a>
+</div>
+</div>
+</footer>
+<!-- Modal Backdrop -->
+<div class="fixed inset-0 z-[200] hidden items-center justify-center p-4" id="modalOverlay">
+<div class="absolute inset-0 bg-primary/60 backdrop-blur-md" onclick="closeModal()"></div>
+<div class="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl relative animate-in zoom-in-95 duration-300">
+<div class="bg-gradient-to-r from-primary to-blue-900 p-8 text-white">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-urdu text-2xl">نئے کنکشن کے لیے درخواست</h3>
+<button class="hover:bg-white/20 p-2 rounded-full transition-colors" onclick="closeModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="text-white/60 urdu-text mt-2 text-sm">برائے مہربانی درج ذیل فارم پُر کریں، ہمارا نمائندہ جلد آپ سے رابطہ کرے گا۔</p>
+</div>
+<form class="p-8 space-y-6" id="connectionForm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="urdu-text text-sm font-bold text-primary">آپ کا نام</label>
+<input class="w-full border border-outline/20 rounded-xl px-4 py-3 focus:ring-2 focus:ring-secondary urdu-text bg-surface" id="name" placeholder="نام درج کریں" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="urdu-text text-sm font-bold text-primary">فون نمبر</label>
+<input class="w-full border border-outline/20 rounded-xl px-4 py-3 focus:ring-2 focus:ring-secondary bg-surface" id="phone" placeholder="03XXXXXXXXX" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="urdu-text text-sm font-bold text-primary">گاؤں / ٹاؤن</label>
+<input class="w-full border border-outline/20 rounded-xl px-4 py-3 focus:ring-2 focus:ring-secondary urdu-text bg-surface" id="village" placeholder="علاقے کا نام" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="urdu-text text-sm font-bold text-primary">پیکج کا انتخاب</label>
+<select class="w-full border border-outline/20 rounded-xl px-4 py-3 focus:ring-2 focus:ring-secondary urdu-text bg-surface" id="selectedPackage">
+<option value="5 Mbps">5 Mbps - Starter</option>
+<option value="10 Mbps">10 Mbps - Basic</option>
+<option value="15 Mbps">15 Mbps - Plus</option>
+<option value="20 Mbps">20 Mbps - Standard</option>
+<option value="25 Mbps">25 Mbps - Pro</option>
+<option value="30 Mbps">30 Mbps - Gamer</option>
+<option value="40 Mbps">40 Mbps - Business</option>
+<option value="50 Mbps">50 Mbps - Enterprise</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="urdu-text text-sm font-bold text-primary">مکمل پتہ</label>
+<textarea class="w-full border border-outline/20 rounded-xl px-4 py-3 focus:ring-2 focus:ring-secondary urdu-text bg-surface" id="address" placeholder="گھر نمبر، گلی وغیرہ" required="" rows="2"></textarea>
+</div>
+<div class="flex items-center gap-3 py-2">
+<input class="rounded text-secondary focus:ring-secondary" id="isExisting" type="checkbox"/>
+<label class="urdu-text text-sm text-outline" for="isExisting">کیا آپ پہلے سے کسٹمر ہیں؟</label>
+</div>
+<button class="w-full py-4 bg-[#25D366] text-white rounded-2xl font-bold text-lg shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-3 urdu-text" type="submit">
+<span class="material-symbols-outlined">send</span> واٹس ایپ کے ذریعے درخواست بھیجیں
+            </button>
+</form>
+</div>
+</div>
+<div class="fixed bottom-8 left-8 z-[150] flex flex-col gap-4">
+<a class="w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform animate-bounce" href="https://wa.me/923067243531">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+</div>
+<script>
+    function toggleMobileNav() {
+        const nav = document.getElementById('mobile-nav');
+        nav.classList.toggle('translate-x-full');
+        nav.classList.toggle('translate-x-0');
+    }
+
+    function openModal(packageName) {
+        document.getElementById('modalOverlay').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        if (packageName) {
+            document.getElementById('selectedPackage').value = packageName;
+        }
+    }
+
+    function closeModal() {
+        document.getElementById('modalOverlay').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    document.getElementById('connectionForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const village = document.getElementById('village').value;
+        const pkg = document.getElementById('selectedPackage').value;
+        const addr = document.getElementById('address').value;
+        const existing = document.getElementById('isExisting').checked ? "جی ہاں" : "نہیں";
+
+        const message = `السلام علیکم Connect Communications!
+میں نئے فائبر کنکشن کے لیے درخواست دینا چاہتا ہوں۔
+
+نام: ${name}
+فون: ${phone}
+گاؤں: ${village}
+پیکج: ${pkg}
+پتہ: ${addr}
+کیا پہلے سے کسٹمر ہیں؟: ${existing}
+
+شکریہ!`;
+
+        const encodedMessage = encodeURIComponent(message);
+        window.open(`https://wa.me/923067243531?text=${encodedMessage}`, '_blank');
+        closeModal();
+    });
+
+    window.onclick = function(event) {
+        const modal = document.getElementById('modalOverlay');
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+
+    // Scroll header effect
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            header.classList.add('py-2', 'shadow-lg', 'bg-white/90');
+            header.classList.remove('h-24');
+            header.classList.add('h-20');
+        } else {
+            header.classList.remove('py-2', 'shadow-lg', 'bg-white/90');
+            header.classList.add('h-24');
+            header.classList.remove('h-20');
+        }
+    });
+</script>
+</body></html>
